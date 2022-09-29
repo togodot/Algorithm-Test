@@ -9,6 +9,20 @@
 # 출력
 # 첫째 줄에 입력으로 주어진 단어에서 대문자는 소문자로, 소문자는 대문자로 바꾼 단어를 출력한다.
 
+# 1
+S = input()
+ans = ''
+
+for i in range(len(S)):
+    if S[i].isupper() == True:
+        ans += S[i].lower()
+    else:
+        ans += S[i].upper()
+
+print(ans)
+
+
+# 2
 S = input()
 NS = []
 ans = ''
