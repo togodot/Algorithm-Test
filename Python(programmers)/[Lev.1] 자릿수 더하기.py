@@ -9,3 +9,7 @@ def solution(x):
         n += int(str(x)[i])
     answer = n
     return answer
+
+### (2023.04.01) map함수로 더 간단한 코드 작성이 가능하다!
+def solution(n):
+    return sum(list(map(int, str(n))))
