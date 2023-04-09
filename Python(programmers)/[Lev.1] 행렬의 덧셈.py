@@ -8,6 +8,7 @@ def solution(arr1, arr2):
     return [[arr1[i][j]+arr2[i][j] for j in range(len(arr1[0]))] for i in range(len(arr1))]
 
 ### zip을 사용한 풀이도 있었다.
+### zip 함수 => 길이가 같은 두개 이상의 자료형에 대하여 동일한 위치의 자료끼리 튜플 형태로 묶어주는 역할을 수행.
 def solution(A,B):
     answer = [[c + d for c, d in zip(a,b)] for a, b in zip(A,B)]
     return answer
