@@ -23,17 +23,17 @@
 # moves 배열의 크기는 1 이상 1,000 이하입니다.
 # moves 배열 각 원소들의 값은 1 이상이며 board 배열의 가로 크기 이하인 자연수입니다.
 
-### while문과 for문 성능 차이가 있는지 공부해야겠다. 다른 사람 풀이에는 이중 for문으로 풀이한 경우가 대부분이었다. 3
+### while문과 for문 성능 차이가 있는지 공부해야겠다. 다른 사람 풀이에는 이중 for문으로 풀이한 경우가 대부분이었다.(이중 for문으로 돌릴 경우 더 긴 러닝타임이 걸리는 케이스도 있었다). 3점.
 def solution(board, moves):
     basket = []
     answer = 0
     
-    for m in [i-1 for i in moves]:
+    for m in moves:
         n = 0
         while n < len(board):
-            if board[n][m] != 0:
-                basket.append(board[n][m])
-                board[n][m] = 0
+            if board[n][m-1] != 0:
+                basket.append(board[n][m-1])
+                board[n][m-1] = 0
                 break
             n += 1
         if len(basket) >= 2 and basket[-1] == basket[-2]:
