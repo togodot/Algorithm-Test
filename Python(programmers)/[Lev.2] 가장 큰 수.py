@@ -8,3 +8,8 @@
 # numbers의 길이는 1 이상 100,000 이하입니다.
 # numbers의 원소는 0 이상 1,000 이하입니다.
 # 정답이 너무 클 수 있으니 문자열로 바꾸어 return 합니다.
+
+### 3, 30과 같은 수의 비교가 관건인 문제. 해결을 위해 각 숫자를 3번 연속한 후 문자열 값으로 비교하여 각 자릿수 값을 비교했다. 7점!
+def solution(numbers):
+    answer = ''.join(sorted(map(str, numbers), reverse=True, key=lambda x: x*3))
+    return str(int(answer))
