@@ -12,3 +12,13 @@ def solution(arr):
         arr += [[0]*c]*(c-r)
 
     return arr
+
+### 헉, extend 안 쓰고 리스트 원소에 + 하면 됐다
+def solution(arr):
+    r, c = len(arr), len(arr[0])
+    if r > c:
+        arr = [a+([0]*(r-c)) for a in arr]
+    if r < c:
+        arr += [[0]*c]*(c-r)
+
+    return arr
