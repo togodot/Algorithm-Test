@@ -10,4 +10,25 @@
 # 
 # 정수들이 담긴 리스트 num_list가 주어질 때, num_list의 모든 원소를 1로 만들기 위해서 필요한 나누기 연산의 횟수를 return하도록 solution 함수를 완성해주세요.
 
-### 
+### line 19에 나누기를 / 대신 % 써서 계속 에러가 발생했다... 1점
+def solution(num_list):
+    answer = 0
+    for num in num_list:
+        while num > 1:
+            if num%2 == 0:
+                num //= 2
+            else:
+                num = (num-1)//2
+            answer += 1
+    return answer
+
+### 홀짝인 경우를 나누지 않아도 풀이가 가능하다.
+def solution(num_list):
+    answer = 0
+
+    for n in num_list:
+        while n != 1:
+            n //= 2
+            answer += 1
+
+    return answer
